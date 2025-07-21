@@ -1,0 +1,235 @@
+CRITICAL - 2025-07-04 20:15:30 --> Error: Class "Locale" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 189.
+ 1 SYSTEMPATH\Boot.php(321): CodeIgniter\CodeIgniter->initialize()
+ 2 SYSTEMPATH\Boot.php(101): CodeIgniter\Boot::initializeCodeIgniter()
+ 3 ROOTPATH\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2025-07-04 20:15:30 --> ErrorException: Uncaught Error: Class "Locale" not found in C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\I18n\TimeTrait.php:76
+Stack trace:
+#0 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\I18n\TimeTrait.php(117): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\HTTP\ResponseTrait.php(398): CodeIgniter\I18n\Time::now()
+#2 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\HTTP\ResponseTrait.php(376): CodeIgniter\HTTP\Response->sendHeaders()
+#3 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(85): CodeIgniter\HTTP\Response->send()
+#4 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Debug\Exceptions.php(162): CodeIgniter\Debug\ExceptionHandler->handle(Object(Error), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Error))
+#6 {main}
+  thrown
+【Previous Exception】
+Error
+Class "Locale" not found
+#0 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Boot.php(321): CodeIgniter\CodeIgniter->initialize()
+#1 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Boot.php(101): CodeIgniter\Boot::initializeCodeIgniter()
+#2 C:\xampp\htdocs\Loundry\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#3 {main}
+[Method: GET, Route: /]
+in SYSTEMPATH\I18n\TimeTrait.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-07-04 18:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-04 18:18:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$pesananModel is deprecated in APPPATH\Controllers\Admin.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+DEBUG - 2025-07-04 18:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-04 18:19:35 --> mysqli_sql_exception: Duplicate entry 'candra' for key 'username' in C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Loundry\app\Controllers\RegisterController.php(50): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\RegisterController->submit()
+#9 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+#10 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Loundry\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-04 18:19:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'candra' for key 'username'
+[Method: POST, Route: register/submit]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (:nama:, :username:, :email:, :password:, :role:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\RegisterController.php(50): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RegisterController->submit()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-07-04 18:19:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'candra' for key 'username'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (\'candra\', \'candra\', \'candra@gmail.com\', \'$2y$10$HuHLtLP49IwatOJlP3H/HOlr4EmQF8OAOdPfZfGjTDsLiSCTHosRK\', \'pelanggan\', \'2025-07-04 18:19:35\', \'2025-07-04 18:19:35\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (\'candra\', \'candra\', \'candra@gmail.com\', \'$2y$10$HuHLtLP49IwatOJlP3H/HOlr4EmQF8OAOdPfZfGjTDsLiSCTHosRK\', \'pelanggan\', \'2025-07-04 18:19:35\', \'2025-07-04 18:19:35\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (:nama:, :username:, :email:, :password:, :role:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\RegisterController.php(50): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RegisterController->submit()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-07-04 18:19:35 --> [Caused by] mysqli_sql_exception: Duplicate entry 'candra' for key 'username'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (\'candra\', \'candra\', \'candra@gmail.com\', \'$2y$10$HuHLtLP49IwatOJlP3H/HOlr4EmQF8OAOdPfZfGjTDsLiSCTHosRK\', \'pelanggan\', \'2025-07-04 18:19:35\', \'2025-07-04 18:19:35\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (\'candra\', \'candra\', \'candra@gmail.com\', \'$2y$10$HuHLtLP49IwatOJlP3H/HOlr4EmQF8OAOdPfZfGjTDsLiSCTHosRK\', \'pelanggan\', \'2025-07-04 18:19:35\', \'2025-07-04 18:19:35\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (\'candra\', \'candra\', \'candra@gmail.com\', \'$2y$10$HuHLtLP49IwatOJlP3H/HOlr4EmQF8OAOdPfZfGjTDsLiSCTHosRK\', \'pelanggan\', \'2025-07-04 18:19:35\', \'2025-07-04 18:19:35\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (:nama:, :username:, :email:, :password:, :role:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\RegisterController.php(50): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RegisterController->submit()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+DEBUG - 2025-07-04 18:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-04 18:20:41 --> mysqli_sql_exception: Duplicate entry 'candra' for key 'username' in C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Loundry\app\Controllers\RegisterController.php(50): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\RegisterController->submit()
+#9 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+#10 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Loundry\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-04 18:20:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'candra' for key 'username'
+[Method: POST, Route: register/submit]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (:nama:, :username:, :email:, :password:, :role:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\RegisterController.php(50): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RegisterController->submit()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-07-04 18:20:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'candra' for key 'username'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (\'candra\', \'candra\', \'candra@gmail.com\', \'$2y$10$E9LUNmnCJD/p2P/TZkT6g.IGLOrTTGx.1OpIcAZvuRGBCLt/c65rS\', \'pelanggan\', \'2025-07-04 18:20:41\', \'2025-07-04 18:20:41\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (\'candra\', \'candra\', \'candra@gmail.com\', \'$2y$10$E9LUNmnCJD/p2P/TZkT6g.IGLOrTTGx.1OpIcAZvuRGBCLt/c65rS\', \'pelanggan\', \'2025-07-04 18:20:41\', \'2025-07-04 18:20:41\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (:nama:, :username:, :email:, :password:, :role:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\RegisterController.php(50): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RegisterController->submit()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-07-04 18:20:41 --> [Caused by] mysqli_sql_exception: Duplicate entry 'candra' for key 'username'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (\'candra\', \'candra\', \'candra@gmail.com\', \'$2y$10$E9LUNmnCJD/p2P/TZkT6g.IGLOrTTGx.1OpIcAZvuRGBCLt/c65rS\', \'pelanggan\', \'2025-07-04 18:20:41\', \'2025-07-04 18:20:41\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (\'candra\', \'candra\', \'candra@gmail.com\', \'$2y$10$E9LUNmnCJD/p2P/TZkT6g.IGLOrTTGx.1OpIcAZvuRGBCLt/c65rS\', \'pelanggan\', \'2025-07-04 18:20:41\', \'2025-07-04 18:20:41\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (\'candra\', \'candra\', \'candra@gmail.com\', \'$2y$10$E9LUNmnCJD/p2P/TZkT6g.IGLOrTTGx.1OpIcAZvuRGBCLt/c65rS\', \'pelanggan\', \'2025-07-04 18:20:41\', \'2025-07-04 18:20:41\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`nama`, `username`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES (:nama:, :username:, :email:, :password:, :role:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\RegisterController.php(50): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RegisterController->submit()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+DEBUG - 2025-07-04 18:21:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:21:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:26:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:26:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-04 18:26:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$pesananModel is deprecated in APPPATH\Controllers\Admin.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+DEBUG - 2025-07-04 18:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-04 18:26:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$pesananModel is deprecated in APPPATH\Controllers\Admin.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+WARNING - 2025-07-04 18:27:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$pesananModel is deprecated in APPPATH\Controllers\Admin.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+DEBUG - 2025-07-04 18:27:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-04 18:27:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$pesananModel is deprecated in APPPATH\Controllers\Admin.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+DEBUG - 2025-07-04 18:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-04 18:28:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$pesananModel is deprecated in APPPATH\Controllers\Admin.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+DEBUG - 2025-07-04 18:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:28:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-04 18:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

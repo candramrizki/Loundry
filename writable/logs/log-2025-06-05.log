@@ -1,0 +1,415 @@
+DEBUG - 2025-06-05 09:22:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-05 09:22:47 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'admin_ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Loundry\app\Controllers\Auth.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->loginSubmit()
+#8 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Loundry\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\Loundry\app\Controllers\Auth.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->loginSubmit()
+#7 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Loundry\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\Loundry\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-06-05 09:22:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login/submit]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->loginSubmit()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+DEBUG - 2025-06-05 09:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:37:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:37:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:46:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:46:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 09:47:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-05 09:49:45 --> ErrorException: Undefined variable $total_harian
+[Method: GET, Route: admin/lp_keuangan]
+in APPPATH\Views\admin\lp_keuangan.php on line 11.
+ 1 APPPATH\Views\admin\lp_keuangan.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_harian', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\lp_keuangan.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\lp_keuangan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/lp_keuangan', [], true)
+ 5 APPPATH\Controllers\Admin.php(153): view('admin/lp_keuangan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->lp_keuangan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 09:50:18 --> ErrorException: Undefined variable $total_harian
+[Method: GET, Route: admin/lp_keuangan]
+in APPPATH\Views\admin\lp_keuangan.php on line 11.
+ 1 APPPATH\Views\admin\lp_keuangan.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_harian', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\lp_keuangan.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\lp_keuangan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/lp_keuangan', [], true)
+ 5 APPPATH\Controllers\Admin.php(153): view('admin/lp_keuangan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->lp_keuangan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 09:54:40 --> ErrorException: Undefined variable $total_harian
+[Method: GET, Route: admin/lp_keuangan]
+in APPPATH\Views\admin\lp_keuangan.php on line 11.
+ 1 APPPATH\Views\admin\lp_keuangan.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_harian', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\lp_keuangan.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\lp_keuangan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/lp_keuangan', [], true)
+ 5 APPPATH\Controllers\Admin.php(153): view('admin/lp_keuangan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->lp_keuangan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 09:54:41 --> ErrorException: Undefined variable $total_harian
+[Method: GET, Route: admin/lp_keuangan]
+in APPPATH\Views\admin\lp_keuangan.php on line 11.
+ 1 APPPATH\Views\admin\lp_keuangan.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_harian', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\lp_keuangan.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\lp_keuangan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/lp_keuangan', [], true)
+ 5 APPPATH\Controllers\Admin.php(153): view('admin/lp_keuangan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->lp_keuangan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 09:54:47 --> ErrorException: Undefined variable $total_harian
+[Method: GET, Route: admin/lp_keuangan]
+in APPPATH\Views\admin\lp_keuangan.php on line 11.
+ 1 APPPATH\Views\admin\lp_keuangan.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_harian', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\lp_keuangan.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\lp_keuangan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/lp_keuangan', [], true)
+ 5 APPPATH\Controllers\Admin.php(153): view('admin/lp_keuangan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->lp_keuangan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 10:05:43 --> ErrorException: Undefined variable $total_harian
+[Method: GET, Route: admin/lp_keuangan]
+in APPPATH\Views\admin\laporan_keuangan.php on line 11.
+ 1 APPPATH\Views\admin\laporan_keuangan.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_harian', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\laporan_keuangan.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\laporan_keuangan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/laporan_keuangan', [], true)
+ 5 APPPATH\Controllers\Admin.php(153): view('admin/laporan_keuangan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->lp_keuangan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 10:05:58 --> ErrorException: Undefined variable $total_harian
+[Method: GET, Route: admin/lp_keuangan]
+in APPPATH\Views\admin\laporan_keuangan.php on line 11.
+ 1 APPPATH\Views\admin\laporan_keuangan.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_harian', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\laporan_keuangan.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\laporan_keuangan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/laporan_keuangan', [], true)
+ 5 APPPATH\Controllers\Admin.php(153): view('admin/laporan_keuangan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->lp_keuangan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 10:14:11 --> ErrorException: Undefined variable $total_harian
+[Method: GET, Route: admin/lp_keuangan]
+in APPPATH\Views\admin\lp_keuangan.php on line 11.
+ 1 APPPATH\Views\admin\lp_keuangan.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_harian', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\lp_keuangan.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\admin\\lp_keuangan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/lp_keuangan', [], true)
+ 5 APPPATH\Controllers\Admin.php(153): view('admin/lp_keuangan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->lp_keuangan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+DEBUG - 2025-06-05 10:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:28:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:50:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 10:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-05 11:40:23 --> ErrorException: Undefined variable $status
+[Method: GET, Route: pelanggan/dashboard_plg]
+in APPPATH\Views\pelanggan\dashboard_plg.php on line 78.
+ 1 APPPATH\Views\pelanggan\dashboard_plg.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php', 78)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pelanggan/dashboard_plg', [], true)
+ 5 APPPATH\Controllers\Pelanggan.php(13): view('pelanggan/dashboard_plg')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->dashboard_plg()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 11:58:46 --> ErrorException: Undefined variable $status
+[Method: GET, Route: pelanggan/dashboard_plg]
+in APPPATH\Views\pelanggan\dashboard_plg.php on line 78.
+ 1 APPPATH\Views\pelanggan\dashboard_plg.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php', 78)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pelanggan/dashboard_plg', [], true)
+ 5 APPPATH\Controllers\Pelanggan.php(13): view('pelanggan/dashboard_plg')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->dashboard_plg()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 11:58:48 --> ErrorException: Undefined variable $status
+[Method: GET, Route: pelanggan/dashboard_plg]
+in APPPATH\Views\pelanggan\dashboard_plg.php on line 78.
+ 1 APPPATH\Views\pelanggan\dashboard_plg.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php', 78)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pelanggan/dashboard_plg', [], true)
+ 5 APPPATH\Controllers\Pelanggan.php(13): view('pelanggan/dashboard_plg')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->dashboard_plg()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+DEBUG - 2025-06-05 11:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 11:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 11:58:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-05 11:58:56 --> ErrorException: Undefined variable $status
+[Method: GET, Route: pelanggan/dashboard_plg]
+in APPPATH\Views\pelanggan\dashboard_plg.php on line 78.
+ 1 APPPATH\Views\pelanggan\dashboard_plg.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php', 78)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pelanggan/dashboard_plg', [], true)
+ 5 APPPATH\Controllers\Pelanggan.php(13): view('pelanggan/dashboard_plg')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->dashboard_plg()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 12:02:23 --> ErrorException: Undefined variable $status
+[Method: GET, Route: pelanggan/dashboard_plg]
+in APPPATH\Views\pelanggan\dashboard_plg.php on line 78.
+ 1 APPPATH\Views\pelanggan\dashboard_plg.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php', 78)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pelanggan/dashboard_plg', [], true)
+ 5 APPPATH\Controllers\Pelanggan.php(13): view('pelanggan/dashboard_plg')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->dashboard_plg()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 12:02:24 --> ErrorException: Undefined variable $status
+[Method: GET, Route: pelanggan/dashboard_plg]
+in APPPATH\Views\pelanggan\dashboard_plg.php on line 78.
+ 1 APPPATH\Views\pelanggan\dashboard_plg.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php', 78)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pelanggan/dashboard_plg', [], true)
+ 5 APPPATH\Controllers\Pelanggan.php(13): view('pelanggan/dashboard_plg')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->dashboard_plg()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 12:02:25 --> ErrorException: Undefined variable $status
+[Method: GET, Route: pelanggan/dashboard_plg]
+in APPPATH\Views\pelanggan\dashboard_plg.php on line 78.
+ 1 APPPATH\Views\pelanggan\dashboard_plg.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php', 78)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pelanggan/dashboard_plg', [], true)
+ 5 APPPATH\Controllers\Pelanggan.php(13): view('pelanggan/dashboard_plg')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->dashboard_plg()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 12:02:25 --> ErrorException: Undefined variable $status
+[Method: GET, Route: pelanggan/dashboard_plg]
+in APPPATH\Views\pelanggan\dashboard_plg.php on line 78.
+ 1 APPPATH\Views\pelanggan\dashboard_plg.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php', 78)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pelanggan/dashboard_plg', [], true)
+ 5 APPPATH\Controllers\Pelanggan.php(13): view('pelanggan/dashboard_plg')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->dashboard_plg()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 12:02:25 --> ErrorException: Undefined variable $status
+[Method: GET, Route: pelanggan/dashboard_plg]
+in APPPATH\Views\pelanggan\dashboard_plg.php on line 78.
+ 1 APPPATH\Views\pelanggan\dashboard_plg.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php', 78)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pelanggan/dashboard_plg', [], true)
+ 5 APPPATH\Controllers\Pelanggan.php(13): view('pelanggan/dashboard_plg')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->dashboard_plg()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+DEBUG - 2025-06-05 12:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 12:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 12:02:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-05 12:02:32 --> ErrorException: Undefined variable $status
+[Method: GET, Route: pelanggan/dashboard_plg]
+in APPPATH\Views\pelanggan\dashboard_plg.php on line 78.
+ 1 APPPATH\Views\pelanggan\dashboard_plg.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php', 78)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pelanggan/dashboard_plg', [], true)
+ 5 APPPATH\Controllers\Pelanggan.php(13): view('pelanggan/dashboard_plg')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->dashboard_plg()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 12:05:49 --> ErrorException: Undefined variable $jadwal
+[Method: GET, Route: pelanggan/dashboard_plg]
+in APPPATH\Views\pelanggan\dashboard_plg.php on line 99.
+ 1 APPPATH\Views\pelanggan\dashboard_plg.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jadwal', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php', 99)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pelanggan/dashboard_plg', [], true)
+ 5 APPPATH\Controllers\Pelanggan.php(13): view('pelanggan/dashboard_plg')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->dashboard_plg()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+CRITICAL - 2025-06-05 12:05:50 --> ErrorException: Undefined variable $jadwal
+[Method: GET, Route: pelanggan/dashboard_plg]
+in APPPATH\Views\pelanggan\dashboard_plg.php on line 99.
+ 1 APPPATH\Views\pelanggan\dashboard_plg.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jadwal', 'C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php', 99)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Loundry\\app\\Views\\pelanggan\\dashboard_plg.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pelanggan/dashboard_plg', [], true)
+ 5 APPPATH\Controllers\Pelanggan.php(13): view('pelanggan/dashboard_plg')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->dashboard_plg()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Loundry\\public\\index.php')
+DEBUG - 2025-06-05 12:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 12:09:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 12:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 12:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 13:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 13:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 14:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 14:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 14:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 14:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 14:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 14:06:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 14:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-05 14:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
